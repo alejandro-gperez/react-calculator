@@ -166,7 +166,7 @@ The calculator includes accessibility improvements such as:
 ## Clone the repository
 
 ```bash
-git clone <REPOSITORY_URL>
+git clone https://github.com/alejandro-gperez/react-calculator
 ```
 
 ---
@@ -224,11 +224,7 @@ on every push and pull request.
 
 # Screenshot
 
-Add a screenshot of the application here.
-
-```txt
-/screenshot.png
-```
+![Vintage Calculator Screenshot](./assets/screenshot.png)
 
 ---
 

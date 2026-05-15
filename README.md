@@ -251,7 +251,7 @@ I would absolutely use this stack again for future frontend projects.
 The application is deployed at:
 
 ```txt
-<DEPLOY_URL>
+react-calculator-jet-five.vercel.app
 ```
 
 ---

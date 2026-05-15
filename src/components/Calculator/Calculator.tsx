@@ -3,13 +3,20 @@ import '../../styles/calculator.css'
 import Display from '../Display'
 import Keyboard from '../Keyboard'
 
+import useCalculator from '../../hooks/useCalculator'
+
 function Calculator() {
+  const {
+    display,
+    handleButtonPress,
+  } = useCalculator()
+
   return (
     <div className="calculator">
-      <Display value="123456789" />
+      <Display value={display} />
 
       <Keyboard
-        onButtonPress={(value) => console.log(value)}
+        onButtonPress={handleButtonPress}
       />
     </div>
   )

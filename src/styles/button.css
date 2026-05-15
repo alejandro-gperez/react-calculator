@@ -22,14 +22,41 @@
 
 .operator {
   background-color: #d98c3f;
+  box-shadow:
+    0 0 12px rgba(255, 214, 102, 0.65),
+    0 4px #8f8a80;
+}
+
+.operator:active {
+  box-shadow:
+    0 0 20px rgba(255, 214, 102, 0.95),
+    0 2px #8f8a80;
 }
 
 .equals {
   background-color: #b24c3d;
   color: white;
+  box-shadow:
+    0 0 14px rgba(255, 120, 120, 0.75),
+    0 4px #8f8a80;
+}
+
+.equals:active {
+  box-shadow:
+    0 0 22px rgba(255, 120, 120, 1),
+    0 2px #8f8a80;
 }
 
 .clear {
   background-color: #8b8b8b;
   color: white;
+  box-shadow:
+    0 0 12px rgba(255, 255, 255, 0.35),
+    0 4px #8f8a80;
+}
+
+.clear:active {
+  box-shadow:
+    0 0 18px rgba(255, 255, 255, 0.65),
+    0 2px #8f8a80;
 }

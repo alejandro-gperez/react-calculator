@@ -4,7 +4,10 @@ import type { DisplayProps } from './Display.types'
 
 function Display({ value }: DisplayProps) {
   return (
-    <div className="calculator-display">
+    <div
+      aria-label="calculator-display"
+      className="calculator-display"
+    >
       {value}
     </div>
   )

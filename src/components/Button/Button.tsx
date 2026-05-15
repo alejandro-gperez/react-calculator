@@ -9,6 +9,7 @@ function Button({
 }: ButtonProps) {
   return (
     <button
+      aria-label={`button-${label}`}
       className={`calculator-button ${variant}`}
       onClick={onClick}
     >

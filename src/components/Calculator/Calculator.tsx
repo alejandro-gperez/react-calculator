@@ -18,6 +18,9 @@ function Calculator() {
       <Keyboard
         onButtonPress={handleButtonPress}
       />
+      <p className="calculator-copyright">
+        © Alejandro Pérez
+      </p>
     </div>
   )
 }

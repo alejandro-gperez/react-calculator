@@ -8,3 +8,11 @@
   padding: 2rem;
   width: 360px;
 }
+
+.calculator-copyright {
+  color: #d6d1c4;
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
+}

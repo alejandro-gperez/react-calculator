@@ -8,7 +8,10 @@ function formatResult(value: number) {
     return 'ERROR'
   }
 
-  const formatted = Number(value.toFixed(6)).toString()
+  const formatted = value.toString().slice(
+  0,
+  MAX_DISPLAY_LENGTH,
+)
 
   if (formatted.length > MAX_DISPLAY_LENGTH) {
     return 'ERROR'
@@ -166,6 +169,12 @@ function useCalculator() {
       return
     }
 
+    if (value === '.') {
+        handleDecimal()
+
+        return
+    }
+
     handleOperation(value)
   }
 
@@ -173,6 +182,29 @@ function useCalculator() {
     display,
     handleButtonPress,
   }
+
+  function handleDecimal() {
+  if (display === 'ERROR') {
+    return
+  }
+
+  if (waitingForNextValue) {
+    setDisplay('0.')
+    setWaitingForNextValue(false)
+
+    return
+  }
+
+  if (display.includes('.')) {
+    return
+  }
+
+  if (display.length >= MAX_DISPLAY_LENGTH) {
+    return
+  }
+
+  setDisplay((previous) => previous + '.')
+    }
 }
 
 export default useCalculator

@@ -130,4 +130,53 @@ describe('Calculator', () => {
       screen.getByLabelText('calculator-display'),
     ).toHaveTextContent('4')
   })
+
+  it('supports decimal numbers', () => {
+  render(<Calculator />)
+
+  fireEvent.click(screen.getByLabelText('button-1'))
+
+  fireEvent.click(screen.getByLabelText('button-.'))
+
+  fireEvent.click(screen.getByLabelText('button-5'))
+
+  expect(
+    screen.getByLabelText('calculator-display'),
+  ).toHaveTextContent('1.5')
+    })
+
+it('prevents duplicate decimals', () => {
+  render(<Calculator />)
+
+  fireEvent.click(screen.getByLabelText('button-1'))
+
+  fireEvent.click(screen.getByLabelText('button-.'))
+
+  fireEvent.click(screen.getByLabelText('button-.'))
+
+  fireEvent.click(screen.getByLabelText('button-5'))
+
+  expect(
+    screen.getByLabelText('calculator-display'),
+  ).toHaveTextContent('1.5')
+    })
+
+it('handles decimal division correctly', () => {
+  render(<Calculator />)
+
+  fireEvent.click(screen.getByLabelText('button-2'))
+
+  fireEvent.click(screen.getByLabelText('button-2'))
+
+  fireEvent.click(screen.getByLabelText('button-÷'))
+
+  fireEvent.click(screen.getByLabelText('button-7'))
+
+  fireEvent.click(screen.getByLabelText('button-='))
+
+  expect(
+    screen.getByLabelText('calculator-display'),
+  ).not.toHaveTextContent('ERROR')
+    })
+
 })

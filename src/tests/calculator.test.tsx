@@ -179,4 +179,22 @@ it('handles decimal division correctly', () => {
   ).not.toHaveTextContent('ERROR')
     })
 
+it('performs modulo correctly', () => {
+  render(<Calculator />)
+
+  fireEvent.click(screen.getByLabelText('button-1'))
+
+  fireEvent.click(screen.getByLabelText('button-0'))
+
+  fireEvent.click(screen.getByLabelText('button-%'))
+
+  fireEvent.click(screen.getByLabelText('button-3'))
+
+  fireEvent.click(screen.getByLabelText('button-='))
+
+  expect(
+    screen.getByLabelText('calculator-display'),
+  ).toHaveTextContent('1')
+    })
+
 })

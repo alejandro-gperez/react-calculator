@@ -39,6 +39,9 @@ function calculate(
       return current === 0
         ? Infinity
         : previous / current
+    case '%':
+      return previous % current  
+        
 
     default:
       return current

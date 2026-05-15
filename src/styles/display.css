@@ -1,0 +1,15 @@
+.calculator-display {
+  align-items: center;
+  background-color: #9cab88;
+  border: 4px solid #4f5b45;
+  border-radius: 10px;
+  color: #1f2a1f;
+  display: flex;
+  font-family: 'VT323', monospace;
+  font-size: 3.5rem;
+  height: 90px;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 0 1rem;
+  text-shadow: 2px 2px #6f7d61;
+}

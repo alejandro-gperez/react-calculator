@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 body {
-  margin: 0;
+  align-items: center;
   background-color: #b7b1a1;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
 }

@@ -178,6 +178,12 @@ function useCalculator() {
         return
     }
 
+    if (value === '+/-') {
+        handleToggleSign()
+        
+        return
+    }
+
     handleOperation(value)
   }
 
@@ -208,6 +214,30 @@ function useCalculator() {
 
   setDisplay((previous) => previous + '.')
     }
+
+ function handleToggleSign() {
+    if (
+        display === '0' ||
+        display === 'ERROR'
+    ) {
+        return
+    }
+
+    if (display.startsWith('-')) {
+        setDisplay(display.slice(1))
+
+        return
+    }
+
+    if (
+        display.length >= MAX_DISPLAY_LENGTH
+    ) {
+        return
+    }
+
+    setDisplay(`-${display}`)
+    }
+
 }
 
 export default useCalculator

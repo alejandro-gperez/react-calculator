@@ -197,4 +197,30 @@ it('performs modulo correctly', () => {
   ).toHaveTextContent('1')
     })
 
+it('toggles negative numbers', () => {
+  render(<Calculator />)
+
+  fireEvent.click(screen.getByLabelText('button-5'))
+
+  fireEvent.click(screen.getByLabelText('button-+/-'))
+
+  expect(
+    screen.getByLabelText('calculator-display'),
+  ).toHaveTextContent('-5')
+})
+
+it('toggles negative numbers back to positive', () => {
+  render(<Calculator />)
+
+  fireEvent.click(screen.getByLabelText('button-5'))
+
+  fireEvent.click(screen.getByLabelText('button-+/-'))
+
+  fireEvent.click(screen.getByLabelText('button-+/-'))
+
+  expect(
+    screen.getByLabelText('calculator-display'),
+  ).toHaveTextContent('5')
+    })
+
 })
